@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import { checkPropTypes } from 'prop-types';
 import './App.css';
+import Profilee from './profile/profi';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const styleObj = {color :"red" , textAlign : "center" };
+ 
+
+  return(
+    <div style = {styleObj}>
+    <Profilee></Profilee>
+
     </div>
-  );
+  )
 }
+Profilee.propTypes = {
+  bioo:checkPropTypes.string,
+  proo:checkPropTypes.string,
+  name:checkPropTypes.string,
+}
+
+
+
 
 export default App;
